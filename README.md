@@ -1,8 +1,17 @@
 # Wordlist-Churner-for-WEP-Cracking
-As an impecunious researcher on an island in Cape Verde, circumstances, considerably frequently, put me in situations where procuring personal access to restaurant (mostly) Wireless networks was required. Here are some tools that proved very useful.
+I spent the year 2017 on a gap year from college in the US. I spent it on an island in Cape Verde called Sal.
+I had practically no money for upkeep. As one would expect, I needed free internet access since I didn't have the stable funds for regular subscriptions.
 
-Password formats were (pleasantly) surprisingly predictable, hence my being able to configure a template word list churner.
+I used to connect to the Wifi networks available at different locations on the island. A good number of them were restaurants.
 
-To be used with Aircrack-Ng.
+For some of them, the restaurant managers changed their passwords periodically. There was a very clear pattern to these changes however.
+
+One in particular was in the form "Name of restaurant" + "3 digit number".
+
+For this specific case, cracking the password involved figuring out what new 3-digit number had been appended to the restaurant name.
+
+With the attached Python script I could generate a list of words containing a given restaurant name, along with all possible 3-digit combinations.
+
+The Aircrack-Ng password cracking tool can take in this wordlist and try out every given combination until it finds the password which enables a successful connection to the network (if it exists in the wordlist).
 
 Very useful, relevant information on Aircrack-Ng: https://gist.github.com/victorreyesh/6532800
